@@ -1,29 +1,78 @@
+/*
+  Importiamo Tailwind CSS.
+  Tailwind mette a disposizione tante utility class già pronte,
+  come padding, margin, colori, flex, grid, ecc.
+*/
 @import "tailwindcss";
 
+/*
+  :root è il selettore del livello più alto del documento.
+  Qui definiamo variabili CSS globali, cioè valori riutilizzabili ovunque.
+  Le variabili iniziano con --.
+*/
 :root {
+  /*
+    Queste due variabili sono state commentate e quindi NON vengono usate.
+    Sarebbero servite per uno sfondo standard e un colore testo standard.
+  */
   /* --background: #ffffff;
   --foreground: #171717; */
+
+  /* Colore principale del brand */
   --color-primary: #293f46;
+
+  /* Colore secondario del brand */
   --color-secondary: #507775;
+
+  /* Colore di accento, usato per dare varietà visiva */
   --color-accent: #879e85;
+
+  /* Colore chiaro morbido per sfondi delicati */
   --color-soft: #e6e7e1;
+
+  /* Seconda variante di sfondo chiaro */
   --color-soft-2: #eff0ea;
+
+  /* Bianco puro */
   --color-white: #ffffff;
+
+  /* Colore testo secondario / meno forte */
   --color-text-soft: #5f6b6b;
+
+  /* Colore dei bordi */
   --color-border: #d7ddd7;
 }
 
+/*
+  Quando clicchi un link che porta a una sezione interna della pagina,
+  lo scorrimento sarà fluido e non brusco.
+*/
 html {
   scroll-behavior: smooth;
 }
 
+/*
+  @theme inline è collegato al modo in cui Tailwind può leggere variabili personalizzate.
+  Qui stai mappando alcune variabili a valori usati dal tema.
+*/
 @theme inline {
+  /* Usa la variabile --background come colore di sfondo */
   --color-background: var(--background);
+
+  /* Usa la variabile --foreground come colore del testo */
   --color-foreground: var(--foreground);
+
+  /* Collega il font sans a una variabile eventualmente fornita da Next/font */
   --font-sans: var(--font-geist-sans);
+
+  /* Collega il font mono a una variabile eventualmente fornita da Next/font */
   --font-mono: var(--font-geist-mono);
 }
 
+/*
+  Questo blocco per la dark mode è commentato.
+  Significa che attualmente NON è attivo.
+*/
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -31,52 +80,73 @@ html {
   }
 } */
 
+/*
+  Stili di base del body, cioè dell'intera pagina.
+*/
 body {
   background-color: var(--color-white);
   color: var(--color-primary);
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/*
+  Da qui in poi definisci classi CSS personalizzate.
+  Queste classi vengono poi richiamate nei file TSX.
+*/
+
+/* Sfondo con colore principale */
 .bg-brand-primary {
   background-color: var(--color-primary);
 }
 
+/* Sfondo con colore secondario */
 .bg-brand-secondary {
   background-color: var(--color-secondary);
 }
 
+/* Sfondo chiaro */
 .bg-brand-soft {
   background-color: var(--color-soft);
 }
 
+/* Secondo sfondo chiaro */
 .bg-brand-soft-2 {
   background-color: var(--color-soft-2);
 }
 
+/* Testo con colore principale */
 .text-brand-primary {
   color: var(--color-primary);
 }
 
+/* Testo con colore secondario */
 .text-brand-secondary {
   color: var(--color-secondary);
 }
 
+/* Testo con colore di accento */
 .text-brand-accent {
   color: var(--color-accent);
 }
 
+/* Testo più morbido / secondario */
 .text-brand-soft {
   color: var(--color-text-soft);
 }
 
+/* Bordo color accento */
 .border-brand-accent {
   border-color: var(--color-accent);
 }
 
+/* Bordo standard del brand */
 .border-brand {
   border-color: var(--color-border);
 }
 
+/*
+  Card standard bianca con bordo, angoli arrotondati e ombra leggera.
+*/
 .brand-card {
   border: 1px solid var(--color-border);
   background-color: var(--color-white);
@@ -84,6 +154,9 @@ body {
   box-shadow: 0 8px 24px rgba(33, 59, 67, 0.06);
 }
 
+/*
+  Variante della card con sfondo leggermente colorato.
+*/
 .brand-card-soft {
   border: 1px solid var(--color-border);
   background-color: var(--color-soft-2);
@@ -91,6 +164,13 @@ body {
   box-shadow: 0 8px 24px rgba(33, 59, 67, 0.05);
 }
 
+/*
+  Stile del bottone principale:
+  - gradiente
+  - testo bianco
+  - angoli arrotondati
+  - animazione morbida
+*/
 .brand-button-primary {
   background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
   color: white;
@@ -98,11 +178,17 @@ body {
   transition: all 0.25s ease;
 }
 
+/*
+  Stato hover del bottone principale, cioè quando ci passi sopra col mouse.
+*/
 .brand-button-primary:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 24px rgba(33, 59, 67, 0.16);
 }
 
+/*
+  Bottone secondario, più neutro.
+*/
 .brand-button-secondary {
   background-color: var(--color-white);
   color: var(--color-primary);
@@ -111,10 +197,14 @@ body {
   transition: all 0.25s ease;
 }
 
+/* Hover del bottone secondario */
 .brand-button-secondary:hover {
   background-color: var(--color-soft-2);
 }
 
+/*
+  Sfondo sfumato per alcune sezioni del sito.
+*/
 .brand-section {
   background: linear-gradient(180deg, #ffffff 0%, #f7f8f5 100%);
 }

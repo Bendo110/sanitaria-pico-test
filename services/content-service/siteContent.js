@@ -1,4 +1,8 @@
+// Questo file è molto simile a data/siteContent.ts,
+// ma è scritto in JavaScript CommonJS per il content service Node/Express.
+
 const siteContent = {
+  // Contenuti per la Home
   home: {
     siteName: "Il Mio Sito",
     tagline: "Landing page professionale",
@@ -19,6 +23,7 @@ const siteContent = {
       "Dare accesso immediato a orari, email, telefono e posizione.",
   },
 
+  // Contenuti per la pagina Chi siamo
   about: {
     sectionLabel: "Chi siamo",
     title: "La persona dietro il progetto",
@@ -29,6 +34,7 @@ const siteContent = {
     photo: "/persona.jpg",
   },
 
+  // Contenuti per la pagina Dove ci troviamo
   location: {
     sectionLabel: "Dove ci troviamo",
     title: "Vieni a trovarci",
@@ -39,6 +45,7 @@ const siteContent = {
       "https://www.google.com/maps?q=Via+Esempio+123,+Milano&output=embed",
   },
 
+  // Contenuti per la pagina Orari e contatti
   contacts: {
     sectionLabel: "Orari e contatti",
     title: "Come contattarci",
@@ -55,4 +62,5 @@ const siteContent = {
   },
 };
 
+// module.exports esporta l'oggetto nel sistema CommonJS di Node.js.
 module.exports = siteContent;

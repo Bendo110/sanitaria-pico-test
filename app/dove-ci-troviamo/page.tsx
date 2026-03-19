@@ -1,13 +1,21 @@
+// Importiamo il componente Image di Next.js per gestire immagini ottimizzate.
 import Image from "next/image";
+
+// Importiamo la funzione che recupera i contenuti del sito.
 import { getSiteContent } from "../../lib/api";
 
+// Pagina "Dove ci troviamo".
+// È async perché legge dati da una fonte esterna prima di renderizzare la pagina.
 export default async function DoveCiTroviamoPage() {
   const content = await getSiteContent();
+
+  // Prendiamo solo la sezione location dai contenuti ricevuti.
   const { location } = content;
 
   return (
     <main className="min-h-screen bg-white px-6 py-16 text-brand-primary">
       <section className="mx-auto max-w-5xl">
+        {/* Intestazione della pagina */}
         <div className="mb-14 text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
             {location.sectionLabel}
@@ -23,6 +31,7 @@ export default async function DoveCiTroviamoPage() {
           </p>
         </div>
 
+        {/* Foto della sede */}
         <div className="overflow-hidden rounded-3xl border border-brand shadow-sm">
           <Image
             src={location.buildingPhoto}
@@ -33,7 +42,9 @@ export default async function DoveCiTroviamoPage() {
           />
         </div>
 
+        {/* Due box affiancati con informazioni */}
         <div className="mt-10 grid gap-8 md:grid-cols-2">
+          {/* Box indirizzo */}
           <div className="brand-card-soft p-8">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-accent">
               Indirizzo
@@ -47,6 +58,11 @@ export default async function DoveCiTroviamoPage() {
               {location.address}
             </p>
 
+            {/*
+              Link esterno verso Google Maps.
+              target="_blank" apre in una nuova scheda.
+              rel="noreferrer" è una buona pratica di sicurezza/privacy.
+            */}
             <a
               href={location.googleMapsUrl}
               target="_blank"
@@ -57,6 +73,7 @@ export default async function DoveCiTroviamoPage() {
             </a>
           </div>
 
+          {/* Box testo informativo */}
           <div className="brand-card p-8">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-accent">
               Informazioni utili
@@ -75,6 +92,10 @@ export default async function DoveCiTroviamoPage() {
           </div>
         </div>
 
+        {/*
+          Mappa incorporata con iframe.
+          Un iframe permette di "incastrare" una pagina esterna dentro la tua pagina.
+        */}
         <div className="mt-12 overflow-hidden rounded-3xl border border-brand shadow-sm">
           <iframe
             src={location.googleMapsEmbedUrl}
@@ -88,6 +109,7 @@ export default async function DoveCiTroviamoPage() {
         </div>
       </section>
 
+      {/* Sezione finale di supporto */}
       <section className="mt-20 bg-brand-soft-2 py-16">
         <div className="mx-auto max-w-4xl px-6">
           <div className="brand-card bg-white p-8 text-center md:p-10">

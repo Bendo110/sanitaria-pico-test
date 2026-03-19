@@ -1,4 +1,11 @@
+// Questo file contiene i contenuti del sito in formato oggetto JavaScript/TypeScript.
+// In pratica qui non stai scrivendo la grafica, ma i testi e alcuni dati da mostrare nelle pagine.
+
+// "export const" significa:
+// - export = questo valore può essere importato in altri file
+// - const = il riferimento alla variabile non cambia
 export const siteContent = {
+  // Sezione contenuti della Home page
   home: {
     siteName: "Il Mio Sito",
     tagline: "Landing page professionale",
@@ -19,6 +26,7 @@ export const siteContent = {
       "Dare accesso immediato a orari, email, telefono e posizione.",
   },
 
+  // Sezione pagina "Chi siamo"
   about: {
     sectionLabel: "Chi siamo",
     title: "La persona dietro il progetto",
@@ -26,9 +34,12 @@ export const siteContent = {
     personRole: "Responsabile attività",
     description:
       "Qui inserirai la descrizione della persona, la sua esperienza, il suo ruolo e le informazioni che vuoi comunicare in modo professionale e chiaro.",
+
+    // Percorso di un'immagine dentro la cartella public.
     photo: "/persona.jpg",
   },
 
+  // Sezione pagina "Dove ci troviamo"
   location: {
     sectionLabel: "Dove ci troviamo",
     title: "Vieni a trovarci",
@@ -39,16 +50,20 @@ export const siteContent = {
       "https://www.google.com/maps?q=Via+Esempio+123,+Milano&output=embed",
   },
 
+  // Sezione pagina contatti
   contacts: {
     sectionLabel: "Orari e contatti",
     title: "Come contattarci",
     description:
       "Qui puoi inserire una descrizione con gli orari e i giorni in cui è possibile contattarvi, insieme ai riferimenti principali.",
+
+    // Array di stringhe con gli orari.
     hours: [
       "Lunedì - Venerdì: 09:00 - 18:00",
       "Sabato: 09:00 - 12:30",
       "Domenica: Chiuso",
     ],
+
     phone: "0123 456789",
     mobile: "333 1234567",
     email: "info@esempio.it",
