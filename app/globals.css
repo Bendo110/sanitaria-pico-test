@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff;
+  --foreground: #171717; */
+  --color-primary: #293f46;
+  --color-secondary: #507775;
+  --color-accent: #879e85;
+  --color-soft: #e6e7e1;
+  --color-soft-2: #eff0ea;
+  --color-white: #ffffff;
+  --color-text-soft: #5f6b6b;
+  --color-border: #d7ddd7;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @theme inline {
@@ -12,15 +24,97 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--color-white);
+  color: var(--color-primary);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-brand-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-brand-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-brand-soft {
+  background-color: var(--color-soft);
+}
+
+.bg-brand-soft-2 {
+  background-color: var(--color-soft-2);
+}
+
+.text-brand-primary {
+  color: var(--color-primary);
+}
+
+.text-brand-secondary {
+  color: var(--color-secondary);
+}
+
+.text-brand-accent {
+  color: var(--color-accent);
+}
+
+.text-brand-soft {
+  color: var(--color-text-soft);
+}
+
+.border-brand-accent {
+  border-color: var(--color-accent);
+}
+
+.border-brand {
+  border-color: var(--color-border);
+}
+
+.brand-card {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(33, 59, 67, 0.06);
+}
+
+.brand-card-soft {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-soft-2);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(33, 59, 67, 0.05);
+}
+
+.brand-button-primary {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  color: white;
+  border-radius: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.brand-button-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(33, 59, 67, 0.16);
+}
+
+.brand-button-secondary {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.brand-button-secondary:hover {
+  background-color: var(--color-soft-2);
+}
+
+.brand-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8f5 100%);
 }
