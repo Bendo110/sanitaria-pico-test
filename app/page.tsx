@@ -7,6 +7,7 @@ import Link from "next/link";
 // Importiamo una funzione che recupera i contenuti del sito.
 // Questa funzione si trova nella cartella lib, cioè nella parte di "logica di supporto".
 import { getSiteContent } from "../lib/api";
+import ServicesCarousel from "@/components/ServicesCarousel";
 
 // Questo è il componente principale della Home page.
 // "export default" significa che questo file esporta questa funzione come contenuto principale.
@@ -19,7 +20,7 @@ export default async function HomePage() {
 
   // Qui estraiamo solo la sezione "home" dall'oggetto completo ricevuto.
   // È una scorciatoia equivalente a scrivere: const home = content.home;
-  const { home } = content;
+  const { home, services } = content;
 
   // Il return restituisce il markup JSX, cioè una sintassi simile a HTML
   // che React e Next.js usano per descrivere l'interfaccia.
@@ -44,7 +45,7 @@ export default async function HomePage() {
           - py-20 / md:py-28 = padding verticale, più grande su schermi medi e grandi
           - md:grid-cols-2 = da schermi medi in su crea 2 colonne
         */}
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
+        <div className="mx-auto grid max-w-[88rem] items-center gap-12 px-4 py-20 sm:px-6 md:grid-cols-2 md:py-28">
           {/* Colonna sinistra con testo principale */}
           <div>
             {/* Piccola etichetta introduttiva sopra al titolo */}
@@ -98,26 +99,11 @@ export default async function HomePage() {
             Colonna destra: un riquadro informativo che mette in evidenza i servizi
             o il messaggio di valore principale.
           */}
-          <div className="brand-card-soft p-8 md:p-10">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-accent">
-              {home.commitmentEyebrow}
-            </p>
-
-            {/* Titolo del riquadro */}
-            <h2 className="mb-4 text-2xl font-semibold text-brand-primary md:text-3xl">
-              {home.servicesTitle}
-            </h2>
-
-            {/* Testo dinamico preso dai contenuti */}
-            <p className="mb-4 leading-8 text-brand-soft">
-              {home.servicesText}
-            </p>
-
-            {/* Testo statico scritto direttamente nel componente */}
-            <p className="leading-8 text-brand-soft">
-              {home.commitmentDescription}
-            </p>
-          </div>
+          <ServicesCarousel
+            title={home.servicesTitle}
+            slides={services.items}
+            buttonLabel={services.buttonLabel}
+          />
         </div>
       </section>
 
@@ -126,7 +112,7 @@ export default async function HomePage() {
         È organizzata come una griglia di 3 card.
       */}
       <section className="bg-white py-16 md:py-20">
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-[88rem] px-4 sm:px-6">
           {/* Blocco titolo sezione */}
           <div className="mb-12 max-w-3xl">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
@@ -180,7 +166,7 @@ export default async function HomePage() {
         Qui spingiamo l'utente ad andare alla pagina dei contatti o della sede.
       */}
       <section className="bg-brand-soft-2 py-16 md:py-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 md:grid-cols-2">
+        <div className="mx-auto grid max-w-[88rem] items-center gap-10 px-4 sm:px-6 md:grid-cols-2">
           {/* Colonna sinistra con testo descrittivo */}
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">

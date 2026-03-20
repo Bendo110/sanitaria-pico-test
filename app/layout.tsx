@@ -47,7 +47,11 @@ export default async function RootLayout({
       */}
       <body className="bg-white text-gray-900 antialiased">
         {/* Barra di navigazione visibile in tutte le pagine */}
-        <Navbar site={content.site} navigation={content.navigation} />
+        <Navbar
+          site={content.site}
+          navigation={content.navigation}
+          services={content.services}
+        />
 
         {/* Qui Next.js inserisce il contenuto della pagina corrente */}
         {children}

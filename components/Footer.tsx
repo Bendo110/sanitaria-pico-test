@@ -11,7 +11,7 @@ export default function Footer({ copyright }: FooterProps) {
         Questo div limita la larghezza e aggiunge padding.
         text-sm rende il testo più piccolo.
       */}
-      <div className="mx-auto max-w-6xl px-6 py-8 text-sm text-brand-primary">
+      <div className="mx-auto max-w-[88rem] px-4 py-8 text-sm text-brand-primary sm:px-6">
         <p>{copyright}</p>
       </div>
     </footer>

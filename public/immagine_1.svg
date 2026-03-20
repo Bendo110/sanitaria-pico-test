@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Immagine 1</title>
+  <desc id="desc">Placeholder per il servizio 1</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff0ea"/>
+      <stop offset="100%" stop-color="#cfd8cf"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="240" cy="180" r="120" fill="#879e85" opacity="0.35"/>
+  <circle cx="950" cy="580" r="170" fill="#507775" opacity="0.18"/>
+  <rect x="180" y="250" width="840" height="300" rx="48" fill="#ffffff" opacity="0.8"/>
+  <text x="600" y="430" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="72" fill="#293f46">
+    immagine_1
+  </text>
+</svg>

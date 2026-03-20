@@ -1,7 +1,3 @@
-// Questo file contiene una copia tipizzata dei contenuti del sito.
-// Al momento il runtime usa il content service in services/content-service,
-// ma questo oggetto resta utile come riferimento, mock o fallback futuro.
-
 export const siteContent = {
   site: {
     name: "Sanitaria Pico",
@@ -16,6 +12,7 @@ export const siteContent = {
     aboutLabel: "Chi siamo",
     locationLabel: "Dove ci troviamo",
     contactsLabel: "Orari e contatti",
+    servicesLabel: "Servizi",
   },
 
   footer: {
@@ -26,9 +23,9 @@ export const siteContent = {
     siteName: "Il Mio Sito",
     tagline: "Landing page professionale",
     heroEyebrow: "Benvenuti in Sanitaria Pico",
-    heroTitle: "Una presenza professionale online, chiara e affidabile",
+    heroTitle: "Benessere su misura, ogni giorno al tuo fianco",
     heroDescription:
-      "Qui puoi presentare il tuo obiettivo, spiegare cosa fai e aiutare le persone a trovarti e contattarti facilmente.",
+      "Il nostro obiettivo è aiutarti a trovare le soluzioni più adatte alle tue esigenze e al tuo benessere grazie a prodotti di qualità, competenza e ascolto.",
     primaryCtaLabel: "Scopri chi siamo",
     secondaryCtaLabel: "Dove ci troviamo",
     commitmentEyebrow: "Il nostro impegno",
@@ -128,5 +125,69 @@ export const siteContent = {
     finalTitle: "Contattaci per informazioni e assistenza",
     finalDescription:
       "Saremo lieti di rispondere alle tue richieste e fornirti tutte le indicazioni necessarie con chiarezza, disponibilità e attenzione.",
+  },
+
+  services: {
+    sectionLabel: "Servizi",
+    menuLabel: "Servizi",
+    buttonLabel: "Scopri di più",
+    titlePrefix: "Dettaglio servizio",
+    description:
+      "Questa è una pagina placeholder del servizio. Qui potrai inserire contenuti reali, descrizione completa, vantaggi e informazioni operative.",
+    ctaLabel: "Contattaci",
+    ctaHref: "/orari-contatti",
+    items: [
+      {
+        slug: "titolo_servizio_1",
+        title: "titolo_servizio_1",
+        image: "/immagine_1.svg",
+        imageAlt: "immagine_1",
+        href: "/servizi/titolo_servizio_1",
+        overview:
+          "Descrizione fittizia del servizio 1. Qui potrai spiegare in modo chiaro cosa comprende il servizio e per chi è pensato.",
+        detailsTitle: "titolo_servizio_1",
+        detailsDescription:
+          "Contenuto fittizio della pagina del servizio 1. In futuro qui potrai inserire immagini reali, vantaggi, processo, FAQ e riferimenti utili.",
+        highlights: [
+          "vantaggio_servizio_1_a",
+          "vantaggio_servizio_1_b",
+          "vantaggio_servizio_1_c",
+        ],
+      },
+      {
+        slug: "titolo_servizio_2",
+        title: "titolo_servizio_2",
+        image: "/immagine_2.svg",
+        imageAlt: "immagine_2",
+        href: "/servizi/titolo_servizio_2",
+        overview:
+          "Descrizione fittizia del servizio 2. Qui potrai presentare il valore del servizio e i principali benefici per il cliente.",
+        detailsTitle: "titolo_servizio_2",
+        detailsDescription:
+          "Contenuto fittizio della pagina del servizio 2. Lo spazio è pronto per testi più completi, casi d’uso e spiegazioni operative.",
+        highlights: [
+          "vantaggio_servizio_2_a",
+          "vantaggio_servizio_2_b",
+          "vantaggio_servizio_2_c",
+        ],
+      },
+      {
+        slug: "titolo_servizio_3",
+        title: "titolo_servizio_3",
+        image: "/immagine_3.svg",
+        imageAlt: "immagine_3",
+        href: "/servizi/titolo_servizio_3",
+        overview:
+          "Descrizione fittizia del servizio 3. Qui potrai raccontare come funziona il servizio e quali problemi aiuta a risolvere.",
+        detailsTitle: "titolo_servizio_3",
+        detailsDescription:
+          "Contenuto fittizio della pagina del servizio 3. La struttura resta pronta per evolvere senza impattare il resto del sito.",
+        highlights: [
+          "vantaggio_servizio_3_a",
+          "vantaggio_servizio_3_b",
+          "vantaggio_servizio_3_c",
+        ],
+      },
+    ],
   },
 };

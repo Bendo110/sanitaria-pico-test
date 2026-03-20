@@ -14,7 +14,7 @@ export default async function DoveCiTroviamoPage() {
 
   return (
     <main className="min-h-screen bg-white px-6 py-16 text-brand-primary">
-      <section className="mx-auto max-w-5xl">
+      <section className="mx-auto max-w-[88rem]">
         {/* Intestazione della pagina */}
         <div className="mb-14 text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
@@ -107,7 +107,7 @@ export default async function DoveCiTroviamoPage() {
 
       {/* Sezione finale di supporto */}
       <section className="mt-20 bg-brand-soft-2 py-16">
-        <div className="mx-auto max-w-4xl px-6">
+        <div className="mx-auto max-w-[88rem] px-4 sm:px-6">
           <div className="brand-card bg-white p-8 text-center md:p-10">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
               {location.finalEyebrow}
