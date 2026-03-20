@@ -49,7 +49,7 @@ export default async function HomePage() {
           <div>
             {/* Piccola etichetta introduttiva sopra al titolo */}
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
-              Benvenuti in Sanitaria Pico
+              {home.heroEyebrow}
             </p>
 
             {/*
@@ -78,7 +78,7 @@ export default async function HomePage() {
                 href="/chi-siamo"
                 className="brand-button-primary px-6 py-3"
               >
-                Scopri chi siamo
+                {home.primaryCtaLabel}
               </Link>
 
               {/*
@@ -89,7 +89,7 @@ export default async function HomePage() {
                 href="/dove-ci-troviamo"
                 className="brand-button-secondary px-6 py-3"
               >
-                Dove ci troviamo
+                {home.secondaryCtaLabel}
               </Link>
             </div>
           </div>
@@ -100,7 +100,7 @@ export default async function HomePage() {
           */}
           <div className="brand-card-soft p-8 md:p-10">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-accent">
-              Il nostro impegno
+              {home.commitmentEyebrow}
             </p>
 
             {/* Titolo del riquadro */}
@@ -115,8 +115,7 @@ export default async function HomePage() {
 
             {/* Testo statico scritto direttamente nel componente */}
             <p className="leading-8 text-brand-soft">
-              Offriamo un punto di riferimento affidabile, chiaro e accogliente,
-              con attenzione alle esigenze delle persone e alla qualità del servizio.
+              {home.commitmentDescription}
             </p>
           </div>
         </div>
@@ -131,10 +130,10 @@ export default async function HomePage() {
           {/* Blocco titolo sezione */}
           <div className="mb-12 max-w-3xl">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
-              Perché scegliere noi
+              {home.whyChooseEyebrow}
             </p>
             <h2 className="text-3xl font-bold md:text-4xl">
-              Un servizio pensato per essere vicino alle persone
+              {home.whyChooseTitle}
             </h2>
           </div>
 
@@ -185,28 +184,24 @@ export default async function HomePage() {
           {/* Colonna sinistra con testo descrittivo */}
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
-              Professionalità e cura
+              {home.finalEyebrow}
             </p>
             <h2 className="mb-5 text-3xl font-bold md:text-4xl">
-              Siamo a disposizione per aiutarti con attenzione e competenza
+              {home.finalTitle}
             </h2>
             <p className="max-w-2xl leading-8 text-brand-soft">
-              Mettiamo al centro la persona, con un approccio affidabile,
-              chiaro e orientato alla qualità del servizio. Contattaci per
-              conoscere meglio la nostra attività, gli orari e tutte le
-              informazioni utili.
+              {home.finalDescription}
             </p>
           </div>
 
           {/* Colonna destra con box e pulsanti */}
           <div className="brand-card bg-white p-8">
             <h3 className="mb-4 text-2xl font-semibold text-brand-primary">
-              Hai bisogno di informazioni?
+              {home.finalCardTitle}
             </h3>
 
             <p className="mb-6 leading-8 text-brand-soft">
-              Consulta gli orari, i contatti e tutti i riferimenti utili per
-              raggiungerci o parlare con noi.
+              {home.finalCardDescription}
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -215,7 +210,7 @@ export default async function HomePage() {
                 href="/orari-contatti"
                 className="brand-button-primary px-6 py-3"
               >
-                Vai ai contatti
+                {home.finalPrimaryCtaLabel}
               </Link>
 
               {/* Link alla pagina sede */}
@@ -223,7 +218,7 @@ export default async function HomePage() {
                 href="/dove-ci-troviamo"
                 className="brand-button-secondary px-6 py-3"
               >
-                Apri la sede
+                {home.finalSecondaryCtaLabel}
               </Link>
             </div>
           </div>

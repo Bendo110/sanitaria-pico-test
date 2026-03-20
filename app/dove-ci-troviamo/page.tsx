@@ -26,8 +26,7 @@ export default async function DoveCiTroviamoPage() {
           </h1>
 
           <p className="mx-auto max-w-3xl text-lg leading-8 text-brand-soft">
-            Ti aspettiamo presso la nostra sede. Qui trovi l’indirizzo, la
-            posizione sulla mappa e un accesso rapido a Google Maps.
+            {location.introText}
           </p>
         </div>
 
@@ -35,7 +34,7 @@ export default async function DoveCiTroviamoPage() {
         <div className="overflow-hidden rounded-3xl border border-brand shadow-sm">
           <Image
             src={location.buildingPhoto}
-            alt="Foto dello stabile"
+            alt={location.buildingAlt}
             width={1200}
             height={600}
             className="h-auto w-full object-cover"
@@ -47,11 +46,11 @@ export default async function DoveCiTroviamoPage() {
           {/* Box indirizzo */}
           <div className="brand-card-soft p-8">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-accent">
-              Indirizzo
+              {location.addressEyebrow}
             </p>
 
             <h2 className="mb-4 text-2xl font-semibold text-brand-primary">
-              Vieni a trovarci
+              {location.addressTitle}
             </h2>
 
             <p className="mb-6 text-lg leading-8 text-brand-soft">
@@ -69,25 +68,22 @@ export default async function DoveCiTroviamoPage() {
               rel="noreferrer"
               className="brand-button-primary inline-block px-6 py-3"
             >
-              Apri su Google Maps
+              {location.mapsCtaLabel}
             </a>
           </div>
 
           {/* Box testo informativo */}
           <div className="brand-card p-8">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-accent">
-              Informazioni utili
+              {location.infoEyebrow}
             </p>
 
             <h2 className="mb-4 text-2xl font-semibold text-brand-primary">
-              Raggiungerci è semplice
+              {location.infoTitle}
             </h2>
 
             <p className="leading-8 text-brand-soft">
-              Consulta la mappa per individuare facilmente la nostra posizione e
-              ottenere indicazioni stradali rapide. Per qualsiasi informazione
-              aggiuntiva puoi contattarci direttamente tramite i riferimenti
-              presenti nella sezione dedicata.
+              {location.infoDescription}
             </p>
           </div>
         </div>
@@ -104,7 +100,7 @@ export default async function DoveCiTroviamoPage() {
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
-            title="Mappa sede Sanitaria Pico"
+            title={location.mapTitle}
           />
         </div>
       </section>
@@ -114,17 +110,15 @@ export default async function DoveCiTroviamoPage() {
         <div className="mx-auto max-w-4xl px-6">
           <div className="brand-card bg-white p-8 text-center md:p-10">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
-              Punto di riferimento
+              {location.finalEyebrow}
             </p>
 
             <h2 className="mb-5 text-3xl font-bold text-brand-primary">
-              Una sede facilmente individuabile e accessibile
+              {location.finalTitle}
             </h2>
 
             <p className="mx-auto max-w-3xl leading-8 text-brand-soft">
-              Abbiamo pensato a uno spazio chiaro, accogliente e semplice da
-              raggiungere, per offrire un’esperienza ordinata e professionale
-              fin dal primo contatto.
+              {location.finalDescription}
             </p>
           </div>
         </div>

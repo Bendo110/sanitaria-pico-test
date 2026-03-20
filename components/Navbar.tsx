@@ -4,20 +4,29 @@ import Image from "next/image";
 // Link serve per navigare tra pagine interne del sito.
 import Link from "next/link";
 
-// Questo array contiene i link del menu.
-// Ogni oggetto rappresenta una voce della navbar.
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/chi-siamo", label: "Chi siamo" },
-  { href: "/dove-ci-troviamo", label: "Dove ci troviamo" },
-
-  // Qui aggiungi una proprietà extra: highlight: true.
-  // Più avanti serve per dare a questo link uno stile diverso dagli altri.
-  { href: "/orari-contatti", label: "Orari e contatti", highlight: true },
-];
+type NavbarProps = {
+  site: {
+    name: string;
+    tagline: string;
+    logoAlt: string;
+  };
+  navigation: {
+    homeLabel: string;
+    aboutLabel: string;
+    locationLabel: string;
+    contactsLabel: string;
+  };
+};
 
 // Componente Navbar riutilizzabile.
-export default function Navbar() {
+export default function Navbar({ site, navigation }: NavbarProps) {
+  const links = [
+    { href: "/", label: navigation.homeLabel },
+    { href: "/chi-siamo", label: navigation.aboutLabel },
+    { href: "/dove-ci-troviamo", label: navigation.locationLabel },
+    { href: "/orari-contatti", label: navigation.contactsLabel, highlight: true },
+  ];
+
   return (
     // Header fisso in alto durante lo scroll.
     // - sticky top-0 = resta attaccato in alto
@@ -41,7 +50,7 @@ export default function Navbar() {
           <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#d7ddd7]">
             <Image
               src="/logo.jpeg"
-              alt="Logo Sanitaria Pico"
+              alt={site.logoAlt}
               width={56}
               height={56}
               className="h-14 w-14 object-contain"
@@ -55,10 +64,10 @@ export default function Navbar() {
           {/* Testo del brand */}
           <div className="text-center md:text-left">
             <h1 className="text-xl font-bold leading-tight tracking-[0.08em] text-brand-primary">
-              SANITARIA PICO
+              {site.name}
             </h1>
             <p className="text-sm text-brand-soft">
-              Soluzioni ortopediche su misura a Mirandola
+              {site.tagline}
             </p>
           </div>
         </Link>

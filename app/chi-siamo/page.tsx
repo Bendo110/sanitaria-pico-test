@@ -34,8 +34,7 @@ export default async function ChiSiamoPage() {
             quindi è statico e non arriva dall'API.
           */}
           <p className="mx-auto max-w-3xl text-lg leading-8 text-brand-soft">
-            Conosci meglio la persona e i valori che guidano l’attività, con
-            attenzione alla qualità del servizio e al rapporto con le persone.
+            {about.introText}
           </p>
         </div>
 
@@ -65,7 +64,7 @@ export default async function ChiSiamoPage() {
           {/* Colonna testo */}
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-accent">
-              Profilo
+              {about.profileEyebrow}
             </p>
 
             <h2 className="mb-3 text-3xl font-bold text-brand-primary">
@@ -88,17 +87,15 @@ export default async function ChiSiamoPage() {
         <div className="mx-auto max-w-4xl px-6">
           <div className="brand-card bg-white p-8 md:p-10 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
-              Il nostro approccio
+              {about.approachEyebrow}
             </p>
 
             <h2 className="mb-5 text-3xl font-bold text-brand-primary">
-              Professionalità, ascolto e attenzione
+              {about.approachTitle}
             </h2>
 
             <p className="mx-auto max-w-3xl leading-8 text-brand-soft">
-              Crediamo in un servizio serio, affidabile e vicino alle esigenze
-              delle persone. Ogni contatto è un’occasione per offrire supporto,
-              chiarezza e competenza, in un ambiente accogliente e professionale.
+              {about.approachDescription}
             </p>
           </div>
         </div>

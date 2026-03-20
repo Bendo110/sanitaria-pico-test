@@ -23,8 +23,7 @@ export default async function OrariContattiPage() {
           </h1>
 
           <p className="mx-auto max-w-3xl text-lg leading-8 text-brand-soft">
-            Qui trovi tutti i riferimenti utili per contattarci, insieme agli
-            orari di disponibilità e alle informazioni principali.
+            {contacts.introText}
           </p>
         </div>
 
@@ -37,11 +36,11 @@ export default async function OrariContattiPage() {
           {/* Colonna orari */}
           <div className="brand-card-soft p-8">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-accent">
-              Disponibilità
+              {contacts.hoursEyebrow}
             </p>
 
             <h2 className="mb-4 text-2xl font-semibold text-brand-primary">
-              Orari
+              {contacts.hoursTitle}
             </h2>
 
             <p className="mb-6 leading-8 text-brand-soft">
@@ -69,11 +68,11 @@ export default async function OrariContattiPage() {
           {/* Colonna contatti */}
           <div className="brand-card p-8">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-accent">
-              Riferimenti
+              {contacts.contactsEyebrow}
             </p>
 
             <h2 className="mb-4 text-2xl font-semibold text-brand-primary">
-              Contatti
+              {contacts.contactsTitle}
             </h2>
 
             {/* space-y-5 aggiunge spazio verticale tra i box interni */}
@@ -81,7 +80,7 @@ export default async function OrariContattiPage() {
               {/* Box telefono */}
               <div className="rounded-2xl border border-brand bg-brand-soft-2 px-5 py-4">
                 <p className="mb-1 text-sm font-semibold uppercase tracking-[0.12em] text-brand-secondary">
-                  Telefono
+                  {contacts.phoneLabel}
                 </p>
 
                 {/*
@@ -97,7 +96,7 @@ export default async function OrariContattiPage() {
               {/* Box cellulare */}
               <div className="rounded-2xl border border-brand bg-brand-soft-2 px-5 py-4">
                 <p className="mb-1 text-sm font-semibold uppercase tracking-[0.12em] text-brand-secondary">
-                  Cellulare
+                  {contacts.mobileLabel}
                 </p>
                 <a href={`tel:${contacts.mobile}`} className="text-lg text-brand-primary hover:text-brand-secondary">
                   {contacts.mobile}
@@ -107,7 +106,7 @@ export default async function OrariContattiPage() {
               {/* Box email */}
               <div className="rounded-2xl border border-brand bg-brand-soft-2 px-5 py-4">
                 <p className="mb-1 text-sm font-semibold uppercase tracking-[0.12em] text-brand-secondary">
-                  Email
+                  {contacts.emailLabel}
                 </p>
 
                 {/*
@@ -125,16 +124,15 @@ export default async function OrariContattiPage() {
         <div className="mt-12">
           <div className="brand-card bg-white p-8 text-center md:p-10">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
-              Siamo a disposizione
+              {contacts.finalEyebrow}
             </p>
 
             <h2 className="mb-5 text-3xl font-bold text-brand-primary">
-              Contattaci per informazioni e assistenza
+              {contacts.finalTitle}
             </h2>
 
             <p className="mx-auto max-w-3xl leading-8 text-brand-soft">
-              Saremo lieti di rispondere alle tue richieste e fornirti tutte le
-              indicazioni necessarie con chiarezza, disponibilità e attenzione.
+              {contacts.finalDescription}
             </p>
           </div>
         </div>
