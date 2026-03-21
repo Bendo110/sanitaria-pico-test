@@ -17,6 +17,11 @@ export const siteContent = {
 
   footer: {
     copyright: "© 2026 Sanitaria Pico - Tutti i diritti riservati",
+    brandName: "Sanitaria Pico",
+    navigationTitle: "Navigazione",
+    contactsTitle: "Contatti",
+    locationTitle: "Come raggiungerci",
+    whatsappLabel: "WhatsApp",
   },
 
   home: {
@@ -29,9 +34,9 @@ export const siteContent = {
     primaryCtaLabel: "Scopri chi siamo",
     secondaryCtaLabel: "Dove ci troviamo",
     commitmentEyebrow: "Il nostro impegno",
-    objectiveTitle: "Obiettivo",
+    objectiveTitle: "Soluzioni su misura",
     objectiveText:
-      "Presentare in modo chiaro chi sei, cosa fai e come contattarti.",
+      "Ogni prodotto è scelto in base a te per offrirti un servizio davvero personalizzato",
     servicesTitle: "Cosa facciamo",
     servicesText:
       "In questa sezione puoi spiegare in modo semplice i tuoi servizi, la tua attività o la missione del sito.",
@@ -39,12 +44,12 @@ export const siteContent = {
       "Offriamo un punto di riferimento affidabile, chiaro e accogliente, con attenzione alle esigenze delle persone e alla qualità del servizio.",
     whyChooseEyebrow: "Perché scegliere noi",
     whyChooseTitle: "Un servizio pensato per essere vicino alle persone",
-    reliabilityTitle: "Affidabilità",
+    reliabilityTitle: "Qualità e Affidabilità",
     reliabilityText:
-      "Offrire un sito ordinato, professionale e facilmente consultabile.",
-    contactsTitle: "Contatti rapidi",
+      "Selezioniamo solo articoli sicuri e certificati",
+    contactsTitle: "Consulenza competente",
     contactsText:
-      "Dare accesso immediato a orari, email, telefono e posizione.",
+      "Ci prendiamo il tempo per capire le tue esigenze guidandoti nella scelta con professionalità e chiarezza",
     finalEyebrow: "Professionalità e cura",
     finalTitle:
       "Siamo a disposizione per aiutarti con attenzione e competenza",
@@ -79,7 +84,7 @@ export const siteContent = {
     title: "Vieni a trovarci",
     introText:
       "Ti aspettiamo presso la nostra sede. Qui trovi l’indirizzo, la posizione sulla mappa e un accesso rapido a Google Maps.",
-    address: "Via Esempio 123, Milano",
+    address: "Via Neri, 2, 41040, Mirandola MO",
     buildingAlt: "Foto dello stabile",
     buildingPhoto: "/stabile.jpg",
     addressEyebrow: "Indirizzo",
@@ -94,9 +99,9 @@ export const siteContent = {
     finalTitle: "Una sede facilmente individuabile e accessibile",
     finalDescription:
       "Abbiamo pensato a uno spazio chiaro, accogliente e semplice da raggiungere, per offrire un’esperienza ordinata e professionale fin dal primo contatto.",
-    googleMapsUrl: "https://www.google.com/maps?q=Via+Esempio+123,+Milano",
+    googleMapsUrl: "https://www.google.com/maps?q=Via+Neri+2,+41040+Mirandola+MO",
     googleMapsEmbedUrl:
-      "https://www.google.com/maps?q=Via+Esempio+123,+Milano&output=embed",
+      "https://www.google.com/maps?q=Via+Neri+2,+41040+Mirandola+MO&output=embed",
   },
 
   contacts: {
@@ -116,11 +121,11 @@ export const siteContent = {
     contactsEyebrow: "Riferimenti",
     contactsTitle: "Contatti",
     phoneLabel: "Telefono",
-    phone: "0123 456789",
+    phone: "0535 139485",
     mobileLabel: "Cellulare",
-    mobile: "333 1234567",
+    mobile: "+39 340 2007098",
     emailLabel: "Email",
-    email: "info@esempio.it",
+    email: "info@sanitariapico.com",
     finalEyebrow: "Siamo a disposizione",
     finalTitle: "Contattaci per informazioni e assistenza",
     finalDescription:

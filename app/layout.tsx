@@ -57,7 +57,14 @@ export default async function RootLayout({
         {children}
 
         {/* Footer visibile in tutte le pagine */}
-        <Footer copyright={content.footer.copyright} />
+        <Footer
+          site={content.site}
+          navigation={content.navigation}
+          services={content.services}
+          contacts={content.contacts}
+          location={content.location}
+          footer={content.footer}
+        />
       </body>
     </html>
   );

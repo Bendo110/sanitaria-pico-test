@@ -166,22 +166,8 @@ export default async function HomePage() {
         Qui spingiamo l'utente ad andare alla pagina dei contatti o della sede.
       */}
       <section className="bg-brand-soft-2 py-16 md:py-20">
-        <div className="mx-auto grid max-w-[88rem] items-center gap-10 px-4 sm:px-6 md:grid-cols-2">
-          {/* Colonna sinistra con testo descrittivo */}
-          <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
-              {home.finalEyebrow}
-            </p>
-            <h2 className="mb-5 text-3xl font-bold md:text-4xl">
-              {home.finalTitle}
-            </h2>
-            <p className="max-w-2xl leading-8 text-brand-soft">
-              {home.finalDescription}
-            </p>
-          </div>
-
-          {/* Colonna destra con box e pulsanti */}
-          <div className="brand-card bg-white p-8">
+        <div className="mx-auto max-w-[88rem] px-4 sm:px-6">
+          <div className="brand-card mx-auto max-w-2xl bg-white p-8">
             <h3 className="mb-4 text-2xl font-semibold text-brand-primary">
               {home.finalCardTitle}
             </h3>
