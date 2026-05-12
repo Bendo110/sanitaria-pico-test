@@ -41,6 +41,8 @@
 
   /* Colore dei bordi */
   --color-border: #d7ddd7;
+  --color-focus: #355f5e;
+  --font-brand: "Segoe UI", "Trebuchet MS", "Avenir Next", sans-serif;
 }
 
 /*
@@ -86,7 +88,8 @@ html {
 body {
   background-color: var(--color-white);
   color: var(--color-primary);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-brand);
+  text-rendering: optimizeLegibility;
 }
 
 /*
@@ -152,6 +155,7 @@ body {
   background-color: var(--color-white);
   border-radius: 1.5rem;
   box-shadow: 0 8px 24px rgba(33, 59, 67, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 /*
@@ -162,6 +166,7 @@ body {
   background-color: var(--color-soft-2);
   border-radius: 1.5rem;
   box-shadow: 0 8px 24px rgba(33, 59, 67, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 /*
@@ -174,6 +179,8 @@ body {
 .brand-button-primary {
   background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
   color: white;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   border-radius: 0.9rem;
   transition: all 0.25s ease;
 }
@@ -193,6 +200,7 @@ body {
   background-color: var(--color-white);
   color: var(--color-primary);
   border: 1px solid var(--color-border);
+  font-weight: 600;
   border-radius: 0.9rem;
   transition: all 0.25s ease;
 }
@@ -202,9 +210,141 @@ body {
   background-color: var(--color-soft-2);
 }
 
+.brand-button-primary:focus-visible,
+.brand-button-secondary:focus-visible,
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .brand-card:hover,
+  .brand-card-soft:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(33, 59, 67, 0.1);
+  }
+}
+
 /*
   Sfondo sfumato per alcune sezioni del sito.
 */
 .brand-section {
   background: linear-gradient(180deg, #ffffff 0%, #f7f8f5 100%);
+}
+
+.about-timeline.vertical-timeline {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+}
+
+.about-timeline.vertical-timeline::before {
+  left: 88% !important;
+  width: 4px !important;
+  background: var(--color-primary) !important;
+}
+
+.about-timeline .vertical-timeline-element {
+  margin: 0 0 3.25rem 0 !important;
+}
+
+.about-timeline .vertical-timeline-element-content {
+  width: calc(88% - 56px) !important;
+  margin-left: 0 !important;
+}
+
+.about-timeline .vertical-timeline-element-icon {
+  left: 88% !important;
+}
+
+.about-timeline .about-timeline-content {
+  padding-right: 1.5rem !important;
+}
+
+.about-timeline .about-timeline-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.about-timeline .about-timeline-date-left {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .about-timeline .about-timeline-title-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    align-items: baseline;
+    column-gap: 1.5rem;
+  }
+
+  .about-timeline .about-timeline-date-left {
+    justify-self: end;
+    text-align: right;
+  }
+}
+
+@media (max-width: 1360px) {
+  .about-timeline.vertical-timeline::before {
+    left: 90% !important;
+  }
+
+  .about-timeline .vertical-timeline-element-icon {
+    left: 90% !important;
+  }
+
+  .about-timeline .vertical-timeline-element-content {
+    width: calc(90% - 48px) !important;
+  }
+}
+
+@media (max-width: 1169px) {
+  .about-timeline.vertical-timeline::before {
+    left: 92% !important;
+  }
+
+  .about-timeline .vertical-timeline-element-icon {
+    left: 92% !important;
+  }
+
+  .about-timeline .about-timeline-content {
+    padding-right: 0.25rem !important;
+  }
+
+  .about-timeline .vertical-timeline-element-content {
+    width: calc(92% - 44px) !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-timeline.vertical-timeline::before {
+    left: 94% !important;
+  }
+
+  .about-timeline .vertical-timeline-element-icon {
+    left: 94% !important;
+  }
+
+  .about-timeline .vertical-timeline-element-content {
+    width: calc(94% - 40px) !important;
+  }
+
+  .about-timeline .about-timeline-title-row {
+    align-items: flex-start;
+  }
+
+  .about-timeline .about-timeline-date-left {
+    font-size: 1.5rem;
+  }
 }

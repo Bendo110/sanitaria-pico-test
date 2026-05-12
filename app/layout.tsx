@@ -2,6 +2,7 @@
 // "type" significa che stiamo importando solo un tipo TypeScript,
 // non una funzione o un valore reale usato a runtime.
 import type { Metadata } from "next";
+import "react-vertical-timeline-component/style.min.css";
 
 // Importiamo il file CSS globale del progetto.
 // Questo file contiene stili validi per tutto il sito.
@@ -10,6 +11,7 @@ import "./globals.css";
 // Importiamo i componenti riutilizzabili della barra di navigazione e del footer.
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTopOnRouteChange from "@/components/ScrollToTopOnRouteChange";
 import { getSiteContent } from "@/lib/api";
 
 // Qui definiamo i metadati della pagina/applicazione.
@@ -52,6 +54,7 @@ export default async function RootLayout({
           navigation={content.navigation}
           services={content.services}
         />
+        <ScrollToTopOnRouteChange />
 
         {/* Qui Next.js inserisce il contenuto della pagina corrente */}
         {children}

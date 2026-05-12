@@ -13,14 +13,10 @@ export default async function DoveCiTroviamoPage() {
   const { location } = content;
 
   return (
-    <main className="min-h-screen bg-white px-6 py-16 text-brand-primary">
+    <main className="min-h-screen bg-white px-6 py-6 md:py-8 text-brand-primary">
       <section className="mx-auto max-w-[88rem]">
         {/* Intestazione della pagina */}
         <div className="mb-14 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
-            {location.sectionLabel}
-          </p>
-
           <h1 className="mb-5 text-4xl font-bold md:text-5xl">
             {location.title}
           </h1>
@@ -105,24 +101,6 @@ export default async function DoveCiTroviamoPage() {
         </div>
       </section>
 
-      {/* Sezione finale di supporto */}
-      <section className="mt-20 bg-brand-soft-2 py-16">
-        <div className="mx-auto max-w-[88rem] px-4 sm:px-6">
-          <div className="brand-card bg-white p-8 text-center md:p-10">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-secondary">
-              {location.finalEyebrow}
-            </p>
-
-            <h2 className="mb-5 text-3xl font-bold text-brand-primary">
-              {location.finalTitle}
-            </h2>
-
-            <p className="mx-auto max-w-3xl leading-8 text-brand-soft">
-              {location.finalDescription}
-            </p>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

@@ -45,7 +45,7 @@ export default async function HomePage() {
           - py-20 / md:py-28 = padding verticale, più grande su schermi medi e grandi
           - md:grid-cols-2 = da schermi medi in su crea 2 colonne
         */}
-        <div className="mx-auto grid max-w-[88rem] items-center gap-12 px-4 py-20 sm:px-6 md:grid-cols-2 md:py-28">
+        <div className="mx-auto grid max-w-[88rem] items-center gap-12 px-4 py-10 sm:grid-cols-2 sm:px-6 md:py-14">
           {/* Colonna sinistra con testo principale */}
           <div>
             {/* Piccola etichetta introduttiva sopra al titolo */}

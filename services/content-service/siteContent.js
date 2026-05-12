@@ -45,8 +45,7 @@ const siteContent = {
     whyChooseEyebrow: "Perché scegliere noi",
     whyChooseTitle: "Un servizio pensato per essere vicino alle persone",
     reliabilityTitle: "Qualità e Affidabilità",
-    reliabilityText:
-      "Selezioniamo solo articoli sicuri e certificati",
+    reliabilityText: "Selezioniamo solo articoli sicuri e certificati",
     contactsTitle: "Consulenza competente",
     contactsText:
       "Ci prendiamo il tempo per capire le tue esigenze guidandoti nella scelta con professionalità e chiarezza",
@@ -59,7 +58,7 @@ const siteContent = {
     finalCardDescription:
       "Consulta gli orari, i contatti e tutti i riferimenti utili per raggiungerci o parlare con noi.",
     finalPrimaryCtaLabel: "Vai ai contatti",
-    finalSecondaryCtaLabel: "Apri la sede",
+    finalSecondaryCtaLabel: "Come raggiungerci",
   },
 
   about: {
@@ -84,7 +83,7 @@ const siteContent = {
     title: "Vieni a trovarci",
     introText:
       "Ti aspettiamo presso la nostra sede. Qui trovi l’indirizzo, la posizione sulla mappa e un accesso rapido a Google Maps.",
-    address: "Via Neri, 2, 41040, Mirandola MO",
+    address: "Via Circonvallazione, 90/92, Mirandola, MO, Italia",
     buildingAlt: "Foto dello stabile",
     buildingPhoto: "/stabile.jpg",
     addressEyebrow: "Indirizzo",
@@ -99,9 +98,10 @@ const siteContent = {
     finalTitle: "Una sede facilmente individuabile e accessibile",
     finalDescription:
       "Abbiamo pensato a uno spazio chiaro, accogliente e semplice da raggiungere, per offrire un’esperienza ordinata e professionale fin dal primo contatto.",
-    googleMapsUrl: "https://www.google.com/maps?q=Via+Neri+2,+41040+Mirandola+MO",
+    googleMapsUrl:
+      "https://www.google.com/maps?q=Via+Circonvallazione+90+92,+Mirandola,+MO,+Italia",
     googleMapsEmbedUrl:
-      "https://www.google.com/maps?q=Via+Neri+2,+41040+Mirandola+MO&output=embed",
+      "https://www.google.com/maps?q=Via+Circonvallazione+90+92,+Mirandola,+MO,+Italia&output=embed",
   },
 
   contacts: {
@@ -138,63 +138,63 @@ const siteContent = {
     buttonLabel: "Scopri di più",
     titlePrefix: "Dettaglio servizio",
     description:
-      "Questa è una pagina placeholder del servizio. Qui potrai inserire contenuti reali, descrizione completa, vantaggi e informazioni operative.",
+      "Ogni servizio nasce da una valutazione attenta delle esigenze della persona, con supporto professionale e soluzioni affidabili.",
     ctaLabel: "Contattaci",
     ctaHref: "/orari-contatti",
     items: [
       {
-        slug: "titolo_servizio_1",
-        title: "titolo_servizio_1",
+        slug: "plantari-su-misura",
+        title: "Plantari su misura",
         image: "/immagine_1.svg",
-        imageAlt: "immagine_1",
-        href: "/servizi/titolo_servizio_1",
+        imageAlt: "Plantari personalizzati",
+        href: "/servizi/plantari-su-misura",
         overview:
-          "Descrizione fittizia del servizio 1. Qui potrai spiegare in modo chiaro cosa comprende il servizio e per chi è pensato.",
-        detailsTitle: "titolo_servizio_1",
+          "Realizziamo plantari personalizzati per migliorare appoggio, postura e comfort nella vita quotidiana e nello sport.",
+        detailsTitle: "Plantari su misura",
         detailsDescription:
-          "Contenuto fittizio della pagina del servizio 1. In futuro qui potrai inserire immagini reali, vantaggi, processo, FAQ e riferimenti utili.",
+          "Dopo un colloquio iniziale e una valutazione dell'appoggio, definiamo la soluzione più adatta e seguiamo la persona anche nel periodo di adattamento.",
         highlights: [
-          "vantaggio_servizio_1_a",
-          "vantaggio_servizio_1_b",
-          "vantaggio_servizio_1_c",
+          "Valutazione personalizzata",
+          "Materiali confortevoli e resistenti",
+          "Supporto nel post-consegna",
         ],
       },
       {
-        slug: "titolo_servizio_2",
-        title: "titolo_servizio_2",
+        slug: "noleggio-ausili",
+        title: "Noleggio ausili ortopedici",
         image: "/immagine_2.svg",
-        imageAlt: "immagine_2",
-        href: "/servizi/titolo_servizio_2",
+        imageAlt: "Ausili ortopedici a noleggio",
+        href: "/servizi/noleggio-ausili",
         overview:
-          "Descrizione fittizia del servizio 2. Qui potrai presentare il valore del servizio e i principali benefici per il cliente.",
-        detailsTitle: "titolo_servizio_2",
+          "Mettiamo a disposizione ausili ortopedici a noleggio per esigenze temporanee post-operatorie o riabilitative.",
+        detailsTitle: "Noleggio ausili ortopedici",
         detailsDescription:
-          "Contenuto fittizio della pagina del servizio 2. Lo spazio è pronto per testi più completi, casi d’uso e spiegazioni operative.",
+          "Ti aiutiamo a scegliere il dispositivo corretto, spieghiamo l'utilizzo in modo chiaro e offriamo assistenza durante tutto il periodo di noleggio.",
         highlights: [
-          "vantaggio_servizio_2_a",
-          "vantaggio_servizio_2_b",
-          "vantaggio_servizio_2_c",
+          "Soluzioni flessibili a breve e medio termine",
+          "Consegna rapida in base alla disponibilità",
+          "Supporto pratico all'utilizzo",
         ],
       },
       {
-        slug: "titolo_servizio_3",
-        title: "titolo_servizio_3",
+        slug: "calze-compressive",
+        title: "Calze compressive e tutori",
         image: "/immagine_3.svg",
-        imageAlt: "immagine_3",
-        href: "/servizi/titolo_servizio_3",
+        imageAlt: "Calze compressive e tutori",
+        href: "/servizi/calze-compressive",
         overview:
-          "Descrizione fittizia del servizio 3. Qui potrai raccontare come funziona il servizio e quali problemi aiuta a risolvere.",
-        detailsTitle: "titolo_servizio_3",
+          "Offriamo calze compressive e tutori selezionati in base alle indicazioni mediche e alle esigenze quotidiane.",
+        detailsTitle: "Calze compressive e tutori",
         detailsDescription:
-          "Contenuto fittizio della pagina del servizio 3. La struttura resta pronta per evolvere senza impattare il resto del sito.",
+          "Ti guidiamo nella scelta della taglia e del livello di compressione, con attenzione a vestibilità, efficacia e facilità d'uso.",
         highlights: [
-          "vantaggio_servizio_3_a",
-          "vantaggio_servizio_3_b",
-          "vantaggio_servizio_3_c",
+          "Consulenza su misura in negozio",
+          "Ampia scelta di modelli certificati",
+          "Indicazioni pratiche per uso e manutenzione",
         ],
       },
     ],
   },
 };
 
-module.exports = siteContent;
+export default siteContent;

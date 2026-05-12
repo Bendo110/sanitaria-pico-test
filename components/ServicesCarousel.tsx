@@ -98,7 +98,7 @@ export default function ServicesCarousel({
                   alt={slide.imageAlt}
                   width={1200}
                   height={780}
-                  className="h-[300px] w-full object-cover sm:h-[360px] lg:h-[420px]"
+                  className="h-[240px] w-full object-contain bg-brand-soft-2 sm:h-[280px] md:h-[320px] lg:h-[360px] xl:h-[420px] xl:object-cover"
                 />
 
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-[#293f46]/86 via-[#293f46]/36 to-transparent p-5 sm:p-6">
