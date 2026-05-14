@@ -2,6 +2,7 @@
 // "type" significa che stiamo importando solo un tipo TypeScript,
 // non una funzione o un valore reale usato a runtime.
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import "react-vertical-timeline-component/style.min.css";
 
 // Importiamo il file CSS globale del progetto.
@@ -54,7 +55,9 @@ export default async function RootLayout({
           navigation={content.navigation}
           services={content.services}
         />
-        <ScrollToTopOnRouteChange />
+        <Suspense fallback={null}>
+          <ScrollToTopOnRouteChange />
+        </Suspense>
 
         {/* Qui Next.js inserisce il contenuto della pagina corrente */}
         {children}
